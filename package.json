@@ -1,0 +1,20 @@
+{
+  "name": "webvuebasetemplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "web": "cd web && npm run dev",
+    "server": "cd server && npm run dev",
+    "dev-all": "npm-run-all -p -r server web",
+    "build-web": "cd web && npm run build",
+    "copy-prod-front": "cd web && cp -r dist/** ../server/public",
+    "package": "npm-run-all build-web copy-prod-front"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
+}
